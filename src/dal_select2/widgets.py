@@ -14,7 +14,7 @@ try:
     from django.contrib.admin.widgets import SELECT2_TRANSLATIONS
 except ImportError:
     SELECT2_TRANSLATIONS = {}
-from django.utils import six
+import six
 from django.utils import translation
 
 

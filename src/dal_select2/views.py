@@ -7,7 +7,7 @@ from dal.views import BaseQuerySetView, ViewMixin
 
 from django import http
 from django.core.exceptions import ImproperlyConfigured
-from django.utils import six
+import six
 from django.utils.translation import ugettext as _
 from django.views.generic.list import View
 

@@ -8,7 +8,7 @@ from dal.widgets import WidgetMixin
 
 from django import forms
 from django.contrib.contenttypes.models import ContentType
-from django.utils import six
+import six
 
 
 class QuerySetSequenceSelectMixin(WidgetMixin):

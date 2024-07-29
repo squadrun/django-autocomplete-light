@@ -7,7 +7,7 @@ from dal_select2.views import Select2ViewMixin
 from queryset_sequence import QuerySetSequence
 
 from django.template.defaultfilters import capfirst
-from django.utils import six
+import six
 from django.db.models import Q
 
 from functools import reduce

@@ -13,7 +13,7 @@ try:
 except ImportError:
     from django.core.urlresolvers import reverse
 from django.test.utils import override_settings
-from django.utils import six
+import six
 
 import mock
 
