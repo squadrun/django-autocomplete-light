@@ -5,7 +5,7 @@ from django import test
 try:
     from django.urls import reverse
 except ImportError:
-    from django.core.urlresolvers import reverse
+    from django.urls import reverse
 import six
 
 from taggit.models import Tag

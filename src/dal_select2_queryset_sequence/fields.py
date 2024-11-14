@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from dal_queryset_sequence.fields import QuerySetSequenceModelField
 
@@ -44,5 +44,5 @@ class Select2GenericForeignKeyModelField(QuerySetSequenceModelField):
                         (Select2QuerySetSequenceAutoView,),
                         {'model_choice': self.model_choice})  # send to the view the model and filter list
 
-        return url(r'^{}_{}_autocomp$'.format(form.__name__, self.field_id),
+        return re_path(r'^{}_{}_autocomp$'.format(form.__name__, self.field_id),
                    AutoView.as_view(), name=url_name)

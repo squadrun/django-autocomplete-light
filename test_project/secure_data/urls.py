@@ -1,6 +1,6 @@
 from dal import autocomplete
 
-from django.conf.urls import url
+from django.urls import path
 
 from .models import TModel
 
@@ -11,8 +11,8 @@ class SecureDataView(autocomplete.Select2QuerySetView):
 
 
 urlpatterns = [
-    url(
-        '^secure-data/$',
+    path(
+        'secure-data/',
         SecureDataView.as_view(),
         name='secure_data',
     ),

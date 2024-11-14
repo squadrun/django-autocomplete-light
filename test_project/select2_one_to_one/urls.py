@@ -1,6 +1,6 @@
 from dal import autocomplete
 
-from django.conf.urls import url
+from django.urls import path
 from django.views import generic
 
 from .forms import TForm
@@ -8,16 +8,16 @@ from .models import TModel
 
 
 urlpatterns = [
-    url(
-        'test-autocomplete/$',
+    path(
+        'test-autocomplete/',
         autocomplete.Select2QuerySetView.as_view(
             model=TModel,
             create_field='name',
         ),
         name='select2_one_to_one_autocomplete',
     ),
-    url(
-        'test/(?P<pk>\d+)/$',
+    path(
+        'test/<int:pk>/',
         generic.UpdateView.as_view(
             model=TModel,
             form_class=TForm,

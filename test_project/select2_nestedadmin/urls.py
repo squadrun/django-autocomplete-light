@@ -1,6 +1,6 @@
 from dal import autocomplete
 
-from django.conf.urls import url
+from django.urls import path
 
 from .models import TModelThree
 
@@ -24,8 +24,8 @@ class LinkedDataView(autocomplete.Select2QuerySetView):
 
 
 urlpatterns = [
-    url(
-        '^linked_data/$',
+    path(
+        'linked_data/',
         LinkedDataView.as_view(model=TModelThree),
         name='nested_linked_data'
     ),

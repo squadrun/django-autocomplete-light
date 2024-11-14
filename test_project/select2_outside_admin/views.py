@@ -1,7 +1,7 @@
 try:
     from django.urls import reverse_lazy
 except ImportError:
-    from django.core.urlresolvers import reverse_lazy
+    from django.urls import reverse_lazy
 from django.views import generic
 
 from select2_many_to_many.forms import TForm
