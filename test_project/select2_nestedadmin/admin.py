@@ -18,9 +18,9 @@ class TModelTwoInline(nested_admin.NestedStackedInline):
     extra = 1
 
 
+@admin.register(TModelOne)
 class TModelOneAdmin(nested_admin.NestedModelAdmin):
     model = TModelOne
     inlines = [TModelTwoInline]
 
 
-admin.site.register(TModelOne, TModelOneAdmin)

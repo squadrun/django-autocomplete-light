@@ -10,7 +10,7 @@ from django.db import transaction
 try:
     from django.urls import reverse
 except ImportError:
-    from django.core.urlresolvers import reverse
+    from django.urls import reverse
 from django.utils import six
 
 from splinter import Browser

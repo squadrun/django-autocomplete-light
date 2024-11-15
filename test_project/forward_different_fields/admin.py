@@ -10,7 +10,7 @@ class TestInline(admin.TabularInline):
     fk_name = 'for_inline'
 
 
+@admin.register(TModel)
 class TestAdmin(admin.ModelAdmin):
     form = TForm
 
-admin.site.register(TModel, TestAdmin)

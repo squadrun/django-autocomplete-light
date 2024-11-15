@@ -1,6 +1,6 @@
 from dal import autocomplete
 
-from django.conf.urls import url
+from django.urls import path
 from django.contrib.auth.models import Group
 from django.views import generic
 
@@ -9,8 +9,8 @@ from .models import TModel
 
 
 urlpatterns = [
-    url(
-        'test/(?P<pk>\d+)/$',
+    path(
+        'test/<int:pk>/',
         generic.UpdateView.as_view(
             model=TModel,
             form_class=TForm,

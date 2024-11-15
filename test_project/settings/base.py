@@ -161,7 +161,6 @@ if not DEBUG:
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
-USE_L10N = True
 USE_TZ = True
 
 DNS = os.environ.get('OPENSHIFT_APP_DNS', None),

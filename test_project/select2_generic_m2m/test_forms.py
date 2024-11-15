@@ -7,7 +7,7 @@ from django.contrib.auth.models import Group
 try:
     from django.urls import reverse
 except ImportError:
-    from django.core.urlresolvers import reverse
+    from django.urls import reverse
 import six
 
 from queryset_sequence import QuerySetSequence

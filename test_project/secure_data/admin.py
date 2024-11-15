@@ -26,7 +26,7 @@ class TestInline(SecureFormMixin, admin.TabularInline):
     form = TForm
 
 
+@admin.register(TModel)
 class TestAdmin(SecureFormMixin, admin.ModelAdmin):
     inlines = [TestInline]
     form = TForm
-admin.site.register(TModel, TestAdmin)

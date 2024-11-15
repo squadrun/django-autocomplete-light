@@ -7,11 +7,11 @@ import django
 from django import forms
 from django import http
 from django import test
-from django.conf.urls import url
+from django.urls import path
 try:
     from django.urls import reverse
 except ImportError:
-    from django.core.urlresolvers import reverse
+    from django.urls import reverse
 from django.test.utils import override_settings
 import six
 
@@ -19,8 +19,8 @@ import mock
 
 
 urlpatterns = [
-    url(
-        r'^test-url/$',
+    path(
+        'test-url/',
         mock.Mock(),
         name='test_url'
     ),
